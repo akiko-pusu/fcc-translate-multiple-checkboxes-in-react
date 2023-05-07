@@ -3,7 +3,7 @@ import "./styles.css";
 import { toppings } from "./utils/toppings"
 
 // 合計値をフォーマットするための関数です
-const getFormattedPrice = (price) => `$${price.toFixed(2)}`;
+export const getFormattedPrice = (price) => `$${price.toFixed(2)}`;
 
 export default function App() {
 
@@ -75,7 +75,7 @@ export default function App() {
         <li>
           <div className="toppings-list-item">
             <div className="left-section">Total:</div>
-            <div className="right-section">{getFormattedPrice(total)}</div>
+            <div className="right-section" id="totalPrice">{getFormattedPrice(total)}</div>
           </div>
         </li>
       </ul>
